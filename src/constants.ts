@@ -162,4 +162,12 @@ export const countriesMeta: Record<string, CountryMeta> = {
         pattern: "乌克兰|基辅|\\b(?:UA|ua)(?:[-_ ]?\\d+(?:[-_ ]?[A-Za-z]{2,})?)?\\b|Ukraine|KBP|🇺🇦",
         icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Ukraine.png`,
     },
+    爱尔兰: {
+        pattern: "爱尔兰|都柏林|\\b(?:IE|ie)(?:[-_ ]?\\d+(?:[-_ ]?[A-Za-z]{2,})?)?\\b|Ireland|DUB|🇮🇪",
+        icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Ireland.png`,
+    },
+    委内瑞拉: {
+        pattern: "委内瑞拉|加拉加斯|\\b(?:VE|ve)(?:[-_ ]?\\d+(?:[-_ ]?[A-Za-z]{2,})?)?\\b|Venezuela|CCS|🇻🇪",
+        icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Venezuela.png`,
+    },
 };
