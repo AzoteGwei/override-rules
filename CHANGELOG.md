@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.5.6](https://github.com/powerfullz/override-rules/compare/src-v2.5.5...src-v2.5.6) (2026-07-03)
+
+
+### Bug Fixes
+
+- Add missing direct private cidrs ([9a47562](https://github.com/powerfullz/override-rules/commit/9a47562013ce5ad485791822b3039f55b3c1addb))
 ## [2.5.5](https://github.com/powerfullz/override-rules/compare/...src-v2.5.5) (2026-06-26)
 
 
