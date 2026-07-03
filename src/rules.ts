@@ -2,6 +2,12 @@ import { PROXY_GROUPS } from "./constants";
 
 const baseRules = [
     `DST-PORT,22,${PROXY_GROUPS.SSH}`,
+    `IP-CIDR,10.0.0.0/8,DIRECT,no-resolve`,
+    `IP-CIDR,100.64.0.0/10,DIRECT,no-resolve`,
+    `IP-CIDR,169.254.0.0/16,DIRECT,no-resolve`,
+    `IP-CIDR,172.16.0.0/12,DIRECT,no-resolve`,
+    `IP-CIDR,192.0.0.0/24,DIRECT,no-resolve`,
+    `IP-CIDR,192.168.0.0/16,DIRECT,no-resolve`,
     `GEOIP,private,DIRECT,no-resolve`,
     `RULE-SET,ADBlock,${PROXY_GROUPS.AD_BLOCK}`,
     `RULE-SET,AdditionalFilter,${PROXY_GROUPS.AD_BLOCK}`,
