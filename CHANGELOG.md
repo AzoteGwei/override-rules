@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.5.7](https://github.com/powerfullz/override-rules/compare/src-v2.5.6...src-v2.5.7) (2026-08-06)
+
+
+### Features
+
+- Add dedicated Anthropic and OpenAI routing ([dddb413](https://github.com/powerfullz/override-rules/commit/dddb413a4d6c373e9399b2b34547a8e53c46f82f))
 ## [2.5.6](https://github.com/powerfullz/override-rules/compare/src-v2.5.5...src-v2.5.6) (2026-07-03)
 
 
