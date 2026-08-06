@@ -112,6 +112,18 @@ export function buildProxyGroups({
             proxies: defaultProxies,
         },
         {
+            name: PROXY_GROUPS.ANTHROPIC,
+            icon: `${CDN_URL}/gh/homarr-labs/dashboard-icons@main/png/claude-ai.png`,
+            type: "select",
+            proxies: defaultProxies,
+        },
+        {
+            name: PROXY_GROUPS.OPENAI,
+            icon: `${CDN_URL}/gh/homarr-labs/dashboard-icons@main/png/openai.png`,
+            type: "select",
+            proxies: defaultProxies,
+        },
+        {
             name: PROXY_GROUPS.AI_SERVICE,
             icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png`,
             type: "select",

@@ -7,6 +7,8 @@ name: Deploy Preview
     paths:
       - 'src/**'
       - 'scripts/**'
+      - 'vendor/domain-list-community'
+      - '.gitmodules'
       - '.github/workflows/preview.yaml'
 
 permissions:
@@ -20,6 +22,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          submodules: recursive
 
       - name: Setup Node.js
         uses: actions/setup-node@v6

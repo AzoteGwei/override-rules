@@ -1,13 +1,11 @@
 import { PROXY_GROUPS } from "./constants";
+import { ANTHROPIC_DOMAIN_SUFFIXES, OPENAI_DOMAIN_SUFFIXES } from "./generated/service_domains";
+
+const buildDomainSuffixRules = (domains: readonly string[], proxyGroup: string): string[] =>
+    domains.map((domain) => `DOMAIN-SUFFIX,${domain},${proxyGroup}`);
 
 const baseRules = [
     `DST-PORT,22,${PROXY_GROUPS.SSH}`,
-    `IP-CIDR,10.0.0.0/8,DIRECT,no-resolve`,
-    `IP-CIDR,100.64.0.0/10,DIRECT,no-resolve`,
-    `IP-CIDR,169.254.0.0/16,DIRECT,no-resolve`,
-    `IP-CIDR,172.16.0.0/12,DIRECT,no-resolve`,
-    `IP-CIDR,192.0.0.0/24,DIRECT,no-resolve`,
-    `IP-CIDR,192.168.0.0/16,DIRECT,no-resolve`,
     `GEOIP,private,DIRECT,no-resolve`,
     `RULE-SET,ADBlock,${PROXY_GROUPS.AD_BLOCK}`,
     `RULE-SET,AdditionalFilter,${PROXY_GROUPS.AD_BLOCK}`,
@@ -16,6 +14,8 @@ const baseRules = [
     `RULE-SET,StaticResources,${PROXY_GROUPS.STATIC_RESOURCES}`,
     `RULE-SET,CDNResources,${PROXY_GROUPS.STATIC_RESOURCES}`,
     `RULE-SET,AdditionalCDNResources,${PROXY_GROUPS.STATIC_RESOURCES}`,
+    ...buildDomainSuffixRules(ANTHROPIC_DOMAIN_SUFFIXES, PROXY_GROUPS.ANTHROPIC),
+    ...buildDomainSuffixRules(OPENAI_DOMAIN_SUFFIXES, PROXY_GROUPS.OPENAI),
     `GEOSITE,category-ai-!cn,${PROXY_GROUPS.AI_SERVICE}`,
     `GEOSITE,bilibili,${PROXY_GROUPS.BILIBILI}`,
     `GEOSITE,youtube,${PROXY_GROUPS.YOUTUBE}`,

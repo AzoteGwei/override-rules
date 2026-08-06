@@ -19,6 +19,7 @@ jobs:
         with:
           fetch-depth: 0
           fetch-tags: true
+          submodules: recursive
 
       - name: Derive version from source tag
         run: |
