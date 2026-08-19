@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.5.8](https://github.com/powerfullz/override-rules/compare/src-v2.5.7...src-v2.5.8) (2026-08-19)
+
+
+### Features
+
+- Add local domain ([cc5942e](https://github.com/powerfullz/override-rules/commit/cc5942e8cb60aaff21151d6ead8626a97804c230))
 ## [2.5.7](https://github.com/powerfullz/override-rules/compare/src-v2.5.6...src-v2.5.7) (2026-08-06)
 
 
