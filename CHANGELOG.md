@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.5.9](https://github.com/powerfullz/override-rules/compare/src-v2.5.8...src-v2.5.9) (2026-09-18)
+
+
+### Bug Fixes
+
+- Prioritize Anthropic and OpenAI routes ([9917324](https://github.com/powerfullz/override-rules/commit/99173247dbf5f266da8d008a58bd00fa80efc229))
 ## [2.5.8](https://github.com/powerfullz/override-rules/compare/src-v2.5.7...src-v2.5.8) (2026-08-19)
 
 
