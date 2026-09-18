@@ -12,11 +12,13 @@ const baseRules = [
     `RULE-SET,AdditionalFilter,${PROXY_GROUPS.AD_BLOCK}`,
     `RULE-SET,SogouInput,${PROXY_GROUPS.SOGOU_INPUT}`,
     `DOMAIN-SUFFIX,truthsocial.com,${PROXY_GROUPS.TRUTH_SOCIAL}`,
+    ...buildDomainSuffixRules(ANTHROPIC_DOMAIN_SUFFIXES, PROXY_GROUPS.ANTHROPIC),
+    ...buildDomainSuffixRules(OPENAI_DOMAIN_SUFFIXES, PROXY_GROUPS.OPENAI),
+    // Keep dedicated service routes ahead of broad CDN rules. The provider lists
+    // can contain the same asset domains used by Anthropic and OpenAI.
     `RULE-SET,StaticResources,${PROXY_GROUPS.STATIC_RESOURCES}`,
     `RULE-SET,CDNResources,${PROXY_GROUPS.STATIC_RESOURCES}`,
     `RULE-SET,AdditionalCDNResources,${PROXY_GROUPS.STATIC_RESOURCES}`,
-    ...buildDomainSuffixRules(ANTHROPIC_DOMAIN_SUFFIXES, PROXY_GROUPS.ANTHROPIC),
-    ...buildDomainSuffixRules(OPENAI_DOMAIN_SUFFIXES, PROXY_GROUPS.OPENAI),
     `GEOSITE,category-ai-!cn,${PROXY_GROUPS.AI_SERVICE}`,
     `GEOSITE,bilibili,${PROXY_GROUPS.BILIBILI}`,
     `GEOSITE,youtube,${PROXY_GROUPS.YOUTUBE}`,
